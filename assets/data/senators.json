@@ -1,0 +1,20 @@
+{
+  "TN": [
+    {"name": "Bill Hagerty", "email": "hagerty@test.gov"},
+    {"name": "Marsha Blackburn", "email": "blackburn@test.gov"}
+  ],
+  "MS": [
+    {"name": "Roger Wicker", "email": "wicker@test.gov"},
+    {"name": "Cindy Hyde-Smith", "email": "hydesmith@test.gov"}
+  ],
+  "CA": [
+    {"name": "Dianne Feinstein", "email": "feinstein@test.gov"},
+    {"name": "Alex Padilla", "email": "padilla@test.gov"}
+  ],
+
+    "TEST": [
+    { "name": "Senator Mock A", "email": "mocka@test.gov" },
+    { "name": "Senator Mock B", "email": "mockb@test.gov" }
+  ]
+
+}
