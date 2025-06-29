@@ -1,10 +1,6 @@
 /* 
 Colors:
 
-Green: #024C30
-Gold: #B8860B
-
-
 */
 
 /******************************************
@@ -251,6 +247,25 @@ body {
   margin: 0.5rem 0;
 }
 
+.bill-divider {
+  border-bottom: 2px solid red;
+  margin: 2rem -1rem;
+}
+
+
+
+/*
+.bill-card {
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 1px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+*/
+
+
 .action-buttons {
   display: flex;
   justify-content: center;
@@ -417,10 +432,6 @@ input[type="text"] {
   background-color: var(--blue);
   margin-top: 0.5rem;
 }
-
-
-
-
 
 
   /*
