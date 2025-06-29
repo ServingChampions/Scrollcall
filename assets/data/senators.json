@@ -1,512 +1,513 @@
 {
-  "TEST": [
+    "TEST": [
     {
-      "name": "Steve Chives",
+      "name": "Senator Steve Chives",
       "email": "colonelreb@rocketmail.com"
     },
     {
-      "name": "Lovie Mary",
-      "email": "colonelreb@rocketmail.com"
+      "name": "Senator Lovie Mary",
+      "email": "test@ussenate.gov"
     }
   ],
-  "TN": [
+
+  "AK": [
     {
-      "name": "Bill Hagerty",
-      "email": "hagerty@test.gov"
+      "name": "Lisa Murkowski (R)",
+      "email": "lisa.murkowski@ussenate.gov"
     },
     {
-      "name": "Marsha Blackburn",
-      "email": "blackburn@test.gov"
-    }
-  ],
-  "MS": [
-    {
-      "name": "Roger Wicker",
-      "email": "wicker@test.gov"
-    },
-    {
-      "name": "Cindy Hyde-Smith",
-      "email": "hydesmith@test.gov"
-    }
-  ],
-  "CA": [
-    {
-      "name": "Dianne Feinstein",
-      "email": "feinstein@test.gov"
-    },
-    {
-      "name": "Alex Padilla",
-      "email": "padilla@test.gov"
+      "name": "Dan Sullivan (R)",
+      "email": "dan.sullivan@ussenate.gov"
     }
   ],
   "AL": [
     {
-      "name": "Senator One (AL)",
-      "email": "senator1_al@test.gov"
+      "name": "Katie Britt (R)",
+      "email": "katie.britt@ussenate.gov"
     },
     {
-      "name": "Senator Two (AL)",
-      "email": "senator2_al@test.gov"
-    }
-  ],
-  "AK": [
-    {
-      "name": "Senator One (AK)",
-      "email": "senator1_ak@test.gov"
-    },
-    {
-      "name": "Senator Two (AK)",
-      "email": "senator2_ak@test.gov"
-    }
-  ],
-  "AZ": [
-    {
-      "name": "Senator One (AZ)",
-      "email": "senator1_az@test.gov"
-    },
-    {
-      "name": "Senator Two (AZ)",
-      "email": "senator2_az@test.gov"
+      "name": "Tommy Tuberville (R)",
+      "email": "tommy.tuberville@ussenate.gov"
     }
   ],
   "AR": [
     {
-      "name": "Senator One (AR)",
-      "email": "senator1_ar@test.gov"
+      "name": "John Boozman (R)",
+      "email": "john.boozman@ussenate.gov"
     },
     {
-      "name": "Senator Two (AR)",
-      "email": "senator2_ar@test.gov"
+      "name": "Tom Cotton (R)",
+      "email": "tom.cotton@ussenate.gov"
+    }
+  ],
+  "AZ": [
+    {
+      "name": "Ruben Gallego (D)",
+      "email": "ruben.gallego@ussenate.gov"
+    },
+    {
+      "name": "Mark Kelly (D)",
+      "email": "mark.kelly@ussenate.gov"
+    }
+  ],
+  "CA": [
+    {
+      "name": "Alex Padilla (D)",
+      "email": "alex.padilla@ussenate.gov"
+    },
+    {
+      "name": "Adam Schiff (D)",
+      "email": "adam.schiff@ussenate.gov"
     }
   ],
   "CO": [
     {
-      "name": "Senator One (CO)",
-      "email": "senator1_co@test.gov"
+      "name": "Michael Bennet (D)",
+      "email": "michael.bennet@ussenate.gov"
     },
     {
-      "name": "Senator Two (CO)",
-      "email": "senator2_co@test.gov"
+      "name": "John Hickenlooper (D)",
+      "email": "john.hickenlooper@ussenate.gov"
     }
   ],
   "CT": [
     {
-      "name": "Senator One (CT)",
-      "email": "senator1_ct@test.gov"
+      "name": "Richard Blumenthal (D)",
+      "email": "richard.blumenthal@ussenate.gov"
     },
     {
-      "name": "Senator Two (CT)",
-      "email": "senator2_ct@test.gov"
+      "name": "Christopher Murphy (D)",
+      "email": "christopher.murphy@ussenate.gov"
     }
   ],
   "DE": [
     {
-      "name": "Senator One (DE)",
-      "email": "senator1_de@test.gov"
+      "name": "Lisa Blunt Rochester (D)",
+      "email": "lisa.blunt@ussenate.gov"
     },
     {
-      "name": "Senator Two (DE)",
-      "email": "senator2_de@test.gov"
+      "name": "Christopher Coons (D)",
+      "email": "christopher.coons@ussenate.gov"
     }
   ],
   "FL": [
     {
-      "name": "Senator One (FL)",
-      "email": "senator1_fl@test.gov"
+      "name": "Ashley Moody (R)",
+      "email": "ashley.moody@ussenate.gov"
     },
     {
-      "name": "Senator Two (FL)",
-      "email": "senator2_fl@test.gov"
+      "name": "Rick Scott (R)",
+      "email": "rick.scott@ussenate.gov"
     }
   ],
   "GA": [
     {
-      "name": "Senator One (GA)",
-      "email": "senator1_ga@test.gov"
+      "name": "Jon Ossoff (D)",
+      "email": "jon.ossoff@ussenate.gov"
     },
     {
-      "name": "Senator Two (GA)",
-      "email": "senator2_ga@test.gov"
+      "name": "Raphael Warnock (D)",
+      "email": "raphael.warnock@ussenate.gov"
     }
   ],
   "HI": [
     {
-      "name": "Senator One (HI)",
-      "email": "senator1_hi@test.gov"
+      "name": "Mazie Hirono (D)",
+      "email": "mazie.hirono@ussenate.gov"
     },
     {
-      "name": "Senator Two (HI)",
-      "email": "senator2_hi@test.gov"
-    }
-  ],
-  "ID": [
-    {
-      "name": "Senator One (ID)",
-      "email": "senator1_id@test.gov"
-    },
-    {
-      "name": "Senator Two (ID)",
-      "email": "senator2_id@test.gov"
-    }
-  ],
-  "IL": [
-    {
-      "name": "Senator One (IL)",
-      "email": "senator1_il@test.gov"
-    },
-    {
-      "name": "Senator Two (IL)",
-      "email": "senator2_il@test.gov"
-    }
-  ],
-  "IN": [
-    {
-      "name": "Senator One (IN)",
-      "email": "senator1_in@test.gov"
-    },
-    {
-      "name": "Senator Two (IN)",
-      "email": "senator2_in@test.gov"
+      "name": "Brian Schatz (D)",
+      "email": "brian.schatz@ussenate.gov"
     }
   ],
   "IA": [
     {
-      "name": "Senator One (IA)",
-      "email": "senator1_ia@test.gov"
+      "name": "Joni Ernst (R)",
+      "email": "joni.ernst@ussenate.gov"
     },
     {
-      "name": "Senator Two (IA)",
-      "email": "senator2_ia@test.gov"
+      "name": "Chuck Grassley (R)",
+      "email": "chuck.grassley@ussenate.gov"
+    }
+  ],
+  "ID": [
+    {
+      "name": "Mike Crapo (R)",
+      "email": "mike.crapo@ussenate.gov"
+    },
+    {
+      "name": "James Risch (R)",
+      "email": "james.risch@ussenate.gov"
+    }
+  ],
+  "IL": [
+    {
+      "name": "Tammy Duckworth (D)",
+      "email": "tammy.duckworth@ussenate.gov"
+    },
+    {
+      "name": "Richard Durbin (D)",
+      "email": "richard.durbin@ussenate.gov"
+    }
+  ],
+  "IN": [
+    {
+      "name": "Jim Banks (R)",
+      "email": "jim.banks@ussenate.gov"
+    },
+    {
+      "name": "Todd Young (R)",
+      "email": "todd.young@ussenate.gov"
     }
   ],
   "KS": [
     {
-      "name": "Senator One (KS)",
-      "email": "senator1_ks@test.gov"
+      "name": "Roger Marshall (R)",
+      "email": "roger.marshall@ussenate.gov"
     },
     {
-      "name": "Senator Two (KS)",
-      "email": "senator2_ks@test.gov"
+      "name": "Jerry Moran (R)",
+      "email": "jerry.moran@ussenate.gov"
     }
   ],
   "KY": [
     {
-      "name": "Senator One (KY)",
-      "email": "senator1_ky@test.gov"
+      "name": "Mitch McConnell (R)",
+      "email": "mitch.mcconnell@ussenate.gov"
     },
     {
-      "name": "Senator Two (KY)",
-      "email": "senator2_ky@test.gov"
+      "name": "Rand Paul (R)",
+      "email": "rand.paul@ussenate.gov"
     }
   ],
   "LA": [
     {
-      "name": "Senator One (LA)",
-      "email": "senator1_la@test.gov"
+      "name": "Bill Cassidy (R)",
+      "email": "bill.cassidy@ussenate.gov"
     },
     {
-      "name": "Senator Two (LA)",
-      "email": "senator2_la@test.gov"
-    }
-  ],
-  "ME": [
-    {
-      "name": "Senator One (ME)",
-      "email": "senator1_me@test.gov"
-    },
-    {
-      "name": "Senator Two (ME)",
-      "email": "senator2_me@test.gov"
-    }
-  ],
-  "MD": [
-    {
-      "name": "Senator One (MD)",
-      "email": "senator1_md@test.gov"
-    },
-    {
-      "name": "Senator Two (MD)",
-      "email": "senator2_md@test.gov"
+      "name": "John Kennedy (R)",
+      "email": "john.kennedy@ussenate.gov"
     }
   ],
   "MA": [
     {
-      "name": "Senator One (MA)",
-      "email": "senator1_ma@test.gov"
+      "name": "Edward Markey (D)",
+      "email": "edward.markey@ussenate.gov"
     },
     {
-      "name": "Senator Two (MA)",
-      "email": "senator2_ma@test.gov"
+      "name": "Elizabeth Warren (D)",
+      "email": "elizabeth.warren@ussenate.gov"
+    }
+  ],
+  "MD": [
+    {
+      "name": "Angela Alsobrooks (D)",
+      "email": "angela.alsobrooks@ussenate.gov"
+    },
+    {
+      "name": "Chris Van Hollen (D)",
+      "email": "chris.van@ussenate.gov"
+    }
+  ],
+  "ME": [
+    {
+      "name": "Susan Collins (R)",
+      "email": "susan.collins@ussenate.gov"
+    },
+    {
+      "name": "Angus King (I)",
+      "email": "angus.king@ussenate.gov"
     }
   ],
   "MI": [
     {
-      "name": "Senator One (MI)",
-      "email": "senator1_mi@test.gov"
+      "name": "Gary Peters (D)",
+      "email": "gary.peters@ussenate.gov"
     },
     {
-      "name": "Senator Two (MI)",
-      "email": "senator2_mi@test.gov"
+      "name": "Elissa Slotkin (D)",
+      "email": "elissa.slotkin@ussenate.gov"
     }
   ],
   "MN": [
     {
-      "name": "Senator One (MN)",
-      "email": "senator1_mn@test.gov"
+      "name": "Amy Klobuchar (D)",
+      "email": "amy.klobuchar@ussenate.gov"
     },
     {
-      "name": "Senator Two (MN)",
-      "email": "senator2_mn@test.gov"
+      "name": "Tina Smith (D)",
+      "email": "tina.smith@ussenate.gov"
     }
   ],
   "MO": [
     {
-      "name": "Senator One (MO)",
-      "email": "senator1_mo@test.gov"
+      "name": "Josh Hawley (R)",
+      "email": "josh.hawley@ussenate.gov"
     },
     {
-      "name": "Senator Two (MO)",
-      "email": "senator2_mo@test.gov"
+      "name": "Eric Schmitt (R)",
+      "email": "eric.schmitt@ussenate.gov"
+    }
+  ],
+  "MS": [
+    {
+      "name": "Cindy Hyde-Smith (R)",
+      "email": "cindy.hyde-smith@ussenate.gov"
+    },
+    {
+      "name": "Roger Wicker (R)",
+      "email": "roger.wicker@ussenate.gov"
     }
   ],
   "MT": [
     {
-      "name": "Senator One (MT)",
-      "email": "senator1_mt@test.gov"
+      "name": "Steve Daines (R)",
+      "email": "steve.daines@ussenate.gov"
     },
     {
-      "name": "Senator Two (MT)",
-      "email": "senator2_mt@test.gov"
-    }
-  ],
-  "NE": [
-    {
-      "name": "Senator One (NE)",
-      "email": "senator1_ne@test.gov"
-    },
-    {
-      "name": "Senator Two (NE)",
-      "email": "senator2_ne@test.gov"
-    }
-  ],
-  "NV": [
-    {
-      "name": "Senator One (NV)",
-      "email": "senator1_nv@test.gov"
-    },
-    {
-      "name": "Senator Two (NV)",
-      "email": "senator2_nv@test.gov"
-    }
-  ],
-  "NH": [
-    {
-      "name": "Senator One (NH)",
-      "email": "senator1_nh@test.gov"
-    },
-    {
-      "name": "Senator Two (NH)",
-      "email": "senator2_nh@test.gov"
-    }
-  ],
-  "NJ": [
-    {
-      "name": "Senator One (NJ)",
-      "email": "senator1_nj@test.gov"
-    },
-    {
-      "name": "Senator Two (NJ)",
-      "email": "senator2_nj@test.gov"
-    }
-  ],
-  "NM": [
-    {
-      "name": "Senator One (NM)",
-      "email": "senator1_nm@test.gov"
-    },
-    {
-      "name": "Senator Two (NM)",
-      "email": "senator2_nm@test.gov"
-    }
-  ],
-  "NY": [
-    {
-      "name": "Senator One (NY)",
-      "email": "senator1_ny@test.gov"
-    },
-    {
-      "name": "Senator Two (NY)",
-      "email": "senator2_ny@test.gov"
+      "name": "Tim Sheehy (R)",
+      "email": "tim.sheehy@ussenate.gov"
     }
   ],
   "NC": [
     {
-      "name": "Senator One (NC)",
-      "email": "senator1_nc@test.gov"
+      "name": "Ted Budd (R)",
+      "email": "ted.budd@ussenate.gov"
     },
     {
-      "name": "Senator Two (NC)",
-      "email": "senator2_nc@test.gov"
+      "name": "Thomas Tillis (R)",
+      "email": "thomas.tillis@ussenate.gov"
     }
   ],
   "ND": [
     {
-      "name": "Senator One (ND)",
-      "email": "senator1_nd@test.gov"
+      "name": "Kevin Cramer (R)",
+      "email": "kevin.cramer@ussenate.gov"
     },
     {
-      "name": "Senator Two (ND)",
-      "email": "senator2_nd@test.gov"
+      "name": "John Hoeven (R)",
+      "email": "john.hoeven@ussenate.gov"
+    }
+  ],
+  "NE": [
+    {
+      "name": "Deb Fischer (R)",
+      "email": "deb.fischer@ussenate.gov"
+    },
+    {
+      "name": "Pete Ricketts (R)",
+      "email": "pete.ricketts@ussenate.gov"
+    }
+  ],
+  "NH": [
+    {
+      "name": "Maggie Hassan (D)",
+      "email": "maggie.hassan@ussenate.gov"
+    },
+    {
+      "name": "Jeanne Shaheen (D)",
+      "email": "jeanne.shaheen@ussenate.gov"
+    }
+  ],
+  "NJ": [
+    {
+      "name": "Cory Booker (D)",
+      "email": "cory.booker@ussenate.gov"
+    },
+    {
+      "name": "Andy Kim (D)",
+      "email": "andy.kim@ussenate.gov"
+    }
+  ],
+  "NM": [
+    {
+      "name": "Martin Heinrich (D)",
+      "email": "martin.heinrich@ussenate.gov"
+    },
+    {
+      "name": "Ben Lujan (D)",
+      "email": "ben.lujan@ussenate.gov"
+    }
+  ],
+  "NV": [
+    {
+      "name": "Catherine Cortez Masto (D)",
+      "email": "catherine.cortez@ussenate.gov"
+    },
+    {
+      "name": "Jacky Rosen (D)",
+      "email": "jacky.rosen@ussenate.gov"
+    }
+  ],
+  "NY": [
+    {
+      "name": "Kirsten Gillibrand (D)",
+      "email": "kirsten.gillibrand@ussenate.gov"
+    },
+    {
+      "name": "Charles Schumer (D)",
+      "email": "charles.schumer@ussenate.gov"
     }
   ],
   "OH": [
     {
-      "name": "Senator One (OH)",
-      "email": "senator1_oh@test.gov"
+      "name": "Jon Husted (R)",
+      "email": "jon.husted@ussenate.gov"
     },
     {
-      "name": "Senator Two (OH)",
-      "email": "senator2_oh@test.gov"
+      "name": "Bernie Moreno (R)",
+      "email": "bernie.moreno@ussenate.gov"
     }
   ],
   "OK": [
     {
-      "name": "Senator One (OK)",
-      "email": "senator1_ok@test.gov"
+      "name": "James Lankford (R)",
+      "email": "james.lankford@ussenate.gov"
     },
     {
-      "name": "Senator Two (OK)",
-      "email": "senator2_ok@test.gov"
+      "name": "Markwayne Mullin (R)",
+      "email": "markwayne.mullin@ussenate.gov"
     }
   ],
   "OR": [
     {
-      "name": "Senator One (OR)",
-      "email": "senator1_or@test.gov"
+      "name": "Jeff Merkley (D)",
+      "email": "jeff.merkley@ussenate.gov"
     },
     {
-      "name": "Senator Two (OR)",
-      "email": "senator2_or@test.gov"
+      "name": "Ron Wyden (D)",
+      "email": "ron.wyden@ussenate.gov"
     }
   ],
   "PA": [
     {
-      "name": "Senator One (PA)",
-      "email": "senator1_pa@test.gov"
+      "name": "John Fetterman (D)",
+      "email": "john.fetterman@ussenate.gov"
     },
     {
-      "name": "Senator Two (PA)",
-      "email": "senator2_pa@test.gov"
+      "name": "David McCormick (R)",
+      "email": "david.mccormick@ussenate.gov"
     }
   ],
   "RI": [
     {
-      "name": "Senator One (RI)",
-      "email": "senator1_ri@test.gov"
+      "name": "John Reed (D)",
+      "email": "john.reed@ussenate.gov"
     },
     {
-      "name": "Senator Two (RI)",
-      "email": "senator2_ri@test.gov"
+      "name": "Sheldon Whitehouse (D)",
+      "email": "sheldon.whitehouse@ussenate.gov"
     }
   ],
   "SC": [
     {
-      "name": "Senator One (SC)",
-      "email": "senator1_sc@test.gov"
+      "name": "Lindsey Graham (R)",
+      "email": "lindsey.graham@ussenate.gov"
     },
     {
-      "name": "Senator Two (SC)",
-      "email": "senator2_sc@test.gov"
+      "name": "Tim Scott (R)",
+      "email": "tim.scott@ussenate.gov"
     }
   ],
   "SD": [
     {
-      "name": "Senator One (SD)",
-      "email": "senator1_sd@test.gov"
+      "name": "Mike Rounds (R)",
+      "email": "mike.rounds@ussenate.gov"
     },
     {
-      "name": "Senator Two (SD)",
-      "email": "senator2_sd@test.gov"
+      "name": "John Thune (R)",
+      "email": "john.thune@ussenate.gov"
+    }
+  ],
+  "TN": [
+    {
+      "name": "Marsha Blackburn (R)",
+      "email": "marsha.blackburn@ussenate.gov"
+    },
+    {
+      "name": "Bill Hagerty (R)",
+      "email": "bill.hagerty@ussenate.gov"
     }
   ],
   "TX": [
     {
-      "name": "Senator One (TX)",
-      "email": "senator1_tx@test.gov"
+      "name": "John Cornyn (R)",
+      "email": "john.cornyn@ussenate.gov"
     },
     {
-      "name": "Senator Two (TX)",
-      "email": "senator2_tx@test.gov"
+      "name": "Ted Cruz (R)",
+      "email": "ted.cruz@ussenate.gov"
     }
   ],
   "UT": [
     {
-      "name": "Senator One (UT)",
-      "email": "senator1_ut@test.gov"
+      "name": "John Curtis (R)",
+      "email": "john.curtis@ussenate.gov"
     },
     {
-      "name": "Senator Two (UT)",
-      "email": "senator2_ut@test.gov"
-    }
-  ],
-  "VT": [
-    {
-      "name": "Senator One (VT)",
-      "email": "senator1_vt@test.gov"
-    },
-    {
-      "name": "Senator Two (VT)",
-      "email": "senator2_vt@test.gov"
+      "name": "Mike Lee (R)",
+      "email": "mike.lee@ussenate.gov"
     }
   ],
   "VA": [
     {
-      "name": "Senator One (VA)",
-      "email": "senator1_va@test.gov"
+      "name": "Timothy Kaine (D)",
+      "email": "timothy.kaine@ussenate.gov"
     },
     {
-      "name": "Senator Two (VA)",
-      "email": "senator2_va@test.gov"
+      "name": "Mark Warner (D)",
+      "email": "mark.warner@ussenate.gov"
+    }
+  ],
+  "VT": [
+    {
+      "name": "Bernie Sanders (I)",
+      "email": "bernie.sanders@ussenate.gov"
+    },
+    {
+      "name": "Peter Welch (D)",
+      "email": "peter.welch@ussenate.gov"
     }
   ],
   "WA": [
     {
-      "name": "Senator One (WA)",
-      "email": "senator1_wa@test.gov"
+      "name": "Maria Cantwell (D)",
+      "email": "maria.cantwell@ussenate.gov"
     },
     {
-      "name": "Senator Two (WA)",
-      "email": "senator2_wa@test.gov"
-    }
-  ],
-  "WV": [
-    {
-      "name": "Senator One (WV)",
-      "email": "senator1_wv@test.gov"
-    },
-    {
-      "name": "Senator Two (WV)",
-      "email": "senator2_wv@test.gov"
+      "name": "Patty Murray (D)",
+      "email": "patty.murray@ussenate.gov"
     }
   ],
   "WI": [
     {
-      "name": "Senator One (WI)",
-      "email": "senator1_wi@test.gov"
+      "name": "Tammy Baldwin (D)",
+      "email": "tammy.baldwin@ussenate.gov"
     },
     {
-      "name": "Senator Two (WI)",
-      "email": "senator2_wi@test.gov"
+      "name": "Ron Johnson (R)",
+      "email": "ron.johnson@ussenate.gov"
+    }
+  ],
+  "WV": [
+    {
+      "name": "Shelley Capito (R)",
+      "email": "shelley.capito@ussenate.gov"
+    },
+    {
+      "name": "James Justice (R)",
+      "email": "james.justice@ussenate.gov"
     }
   ],
   "WY": [
     {
-      "name": "Senator One (WY)",
-      "email": "senator1_wy@test.gov"
+      "name": "John Barrasso (R)",
+      "email": "john.barrasso@ussenate.gov"
     },
     {
-      "name": "Senator Two (WY)",
-      "email": "senator2_wy@test.gov"
+      "name": "Cynthia Lummis (R)",
+      "email": "cynthia.lummis@ussenate.gov"
     }
   ]
 }
