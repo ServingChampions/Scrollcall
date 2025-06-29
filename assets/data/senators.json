@@ -1,0 +1,512 @@
+{
+  "TEST": [
+    {
+      "name": "Steve Chives",
+      "email": "colonelreb@rocketmail.com"
+    },
+    {
+      "name": "Lovie Mary",
+      "email": "colonelreb@rocketmail.com"
+    }
+  ],
+  "TN": [
+    {
+      "name": "Bill Hagerty",
+      "email": "hagerty@test.gov"
+    },
+    {
+      "name": "Marsha Blackburn",
+      "email": "blackburn@test.gov"
+    }
+  ],
+  "MS": [
+    {
+      "name": "Roger Wicker",
+      "email": "wicker@test.gov"
+    },
+    {
+      "name": "Cindy Hyde-Smith",
+      "email": "hydesmith@test.gov"
+    }
+  ],
+  "CA": [
+    {
+      "name": "Dianne Feinstein",
+      "email": "feinstein@test.gov"
+    },
+    {
+      "name": "Alex Padilla",
+      "email": "padilla@test.gov"
+    }
+  ],
+  "AL": [
+    {
+      "name": "Senator One (AL)",
+      "email": "senator1_al@test.gov"
+    },
+    {
+      "name": "Senator Two (AL)",
+      "email": "senator2_al@test.gov"
+    }
+  ],
+  "AK": [
+    {
+      "name": "Senator One (AK)",
+      "email": "senator1_ak@test.gov"
+    },
+    {
+      "name": "Senator Two (AK)",
+      "email": "senator2_ak@test.gov"
+    }
+  ],
+  "AZ": [
+    {
+      "name": "Senator One (AZ)",
+      "email": "senator1_az@test.gov"
+    },
+    {
+      "name": "Senator Two (AZ)",
+      "email": "senator2_az@test.gov"
+    }
+  ],
+  "AR": [
+    {
+      "name": "Senator One (AR)",
+      "email": "senator1_ar@test.gov"
+    },
+    {
+      "name": "Senator Two (AR)",
+      "email": "senator2_ar@test.gov"
+    }
+  ],
+  "CO": [
+    {
+      "name": "Senator One (CO)",
+      "email": "senator1_co@test.gov"
+    },
+    {
+      "name": "Senator Two (CO)",
+      "email": "senator2_co@test.gov"
+    }
+  ],
+  "CT": [
+    {
+      "name": "Senator One (CT)",
+      "email": "senator1_ct@test.gov"
+    },
+    {
+      "name": "Senator Two (CT)",
+      "email": "senator2_ct@test.gov"
+    }
+  ],
+  "DE": [
+    {
+      "name": "Senator One (DE)",
+      "email": "senator1_de@test.gov"
+    },
+    {
+      "name": "Senator Two (DE)",
+      "email": "senator2_de@test.gov"
+    }
+  ],
+  "FL": [
+    {
+      "name": "Senator One (FL)",
+      "email": "senator1_fl@test.gov"
+    },
+    {
+      "name": "Senator Two (FL)",
+      "email": "senator2_fl@test.gov"
+    }
+  ],
+  "GA": [
+    {
+      "name": "Senator One (GA)",
+      "email": "senator1_ga@test.gov"
+    },
+    {
+      "name": "Senator Two (GA)",
+      "email": "senator2_ga@test.gov"
+    }
+  ],
+  "HI": [
+    {
+      "name": "Senator One (HI)",
+      "email": "senator1_hi@test.gov"
+    },
+    {
+      "name": "Senator Two (HI)",
+      "email": "senator2_hi@test.gov"
+    }
+  ],
+  "ID": [
+    {
+      "name": "Senator One (ID)",
+      "email": "senator1_id@test.gov"
+    },
+    {
+      "name": "Senator Two (ID)",
+      "email": "senator2_id@test.gov"
+    }
+  ],
+  "IL": [
+    {
+      "name": "Senator One (IL)",
+      "email": "senator1_il@test.gov"
+    },
+    {
+      "name": "Senator Two (IL)",
+      "email": "senator2_il@test.gov"
+    }
+  ],
+  "IN": [
+    {
+      "name": "Senator One (IN)",
+      "email": "senator1_in@test.gov"
+    },
+    {
+      "name": "Senator Two (IN)",
+      "email": "senator2_in@test.gov"
+    }
+  ],
+  "IA": [
+    {
+      "name": "Senator One (IA)",
+      "email": "senator1_ia@test.gov"
+    },
+    {
+      "name": "Senator Two (IA)",
+      "email": "senator2_ia@test.gov"
+    }
+  ],
+  "KS": [
+    {
+      "name": "Senator One (KS)",
+      "email": "senator1_ks@test.gov"
+    },
+    {
+      "name": "Senator Two (KS)",
+      "email": "senator2_ks@test.gov"
+    }
+  ],
+  "KY": [
+    {
+      "name": "Senator One (KY)",
+      "email": "senator1_ky@test.gov"
+    },
+    {
+      "name": "Senator Two (KY)",
+      "email": "senator2_ky@test.gov"
+    }
+  ],
+  "LA": [
+    {
+      "name": "Senator One (LA)",
+      "email": "senator1_la@test.gov"
+    },
+    {
+      "name": "Senator Two (LA)",
+      "email": "senator2_la@test.gov"
+    }
+  ],
+  "ME": [
+    {
+      "name": "Senator One (ME)",
+      "email": "senator1_me@test.gov"
+    },
+    {
+      "name": "Senator Two (ME)",
+      "email": "senator2_me@test.gov"
+    }
+  ],
+  "MD": [
+    {
+      "name": "Senator One (MD)",
+      "email": "senator1_md@test.gov"
+    },
+    {
+      "name": "Senator Two (MD)",
+      "email": "senator2_md@test.gov"
+    }
+  ],
+  "MA": [
+    {
+      "name": "Senator One (MA)",
+      "email": "senator1_ma@test.gov"
+    },
+    {
+      "name": "Senator Two (MA)",
+      "email": "senator2_ma@test.gov"
+    }
+  ],
+  "MI": [
+    {
+      "name": "Senator One (MI)",
+      "email": "senator1_mi@test.gov"
+    },
+    {
+      "name": "Senator Two (MI)",
+      "email": "senator2_mi@test.gov"
+    }
+  ],
+  "MN": [
+    {
+      "name": "Senator One (MN)",
+      "email": "senator1_mn@test.gov"
+    },
+    {
+      "name": "Senator Two (MN)",
+      "email": "senator2_mn@test.gov"
+    }
+  ],
+  "MO": [
+    {
+      "name": "Senator One (MO)",
+      "email": "senator1_mo@test.gov"
+    },
+    {
+      "name": "Senator Two (MO)",
+      "email": "senator2_mo@test.gov"
+    }
+  ],
+  "MT": [
+    {
+      "name": "Senator One (MT)",
+      "email": "senator1_mt@test.gov"
+    },
+    {
+      "name": "Senator Two (MT)",
+      "email": "senator2_mt@test.gov"
+    }
+  ],
+  "NE": [
+    {
+      "name": "Senator One (NE)",
+      "email": "senator1_ne@test.gov"
+    },
+    {
+      "name": "Senator Two (NE)",
+      "email": "senator2_ne@test.gov"
+    }
+  ],
+  "NV": [
+    {
+      "name": "Senator One (NV)",
+      "email": "senator1_nv@test.gov"
+    },
+    {
+      "name": "Senator Two (NV)",
+      "email": "senator2_nv@test.gov"
+    }
+  ],
+  "NH": [
+    {
+      "name": "Senator One (NH)",
+      "email": "senator1_nh@test.gov"
+    },
+    {
+      "name": "Senator Two (NH)",
+      "email": "senator2_nh@test.gov"
+    }
+  ],
+  "NJ": [
+    {
+      "name": "Senator One (NJ)",
+      "email": "senator1_nj@test.gov"
+    },
+    {
+      "name": "Senator Two (NJ)",
+      "email": "senator2_nj@test.gov"
+    }
+  ],
+  "NM": [
+    {
+      "name": "Senator One (NM)",
+      "email": "senator1_nm@test.gov"
+    },
+    {
+      "name": "Senator Two (NM)",
+      "email": "senator2_nm@test.gov"
+    }
+  ],
+  "NY": [
+    {
+      "name": "Senator One (NY)",
+      "email": "senator1_ny@test.gov"
+    },
+    {
+      "name": "Senator Two (NY)",
+      "email": "senator2_ny@test.gov"
+    }
+  ],
+  "NC": [
+    {
+      "name": "Senator One (NC)",
+      "email": "senator1_nc@test.gov"
+    },
+    {
+      "name": "Senator Two (NC)",
+      "email": "senator2_nc@test.gov"
+    }
+  ],
+  "ND": [
+    {
+      "name": "Senator One (ND)",
+      "email": "senator1_nd@test.gov"
+    },
+    {
+      "name": "Senator Two (ND)",
+      "email": "senator2_nd@test.gov"
+    }
+  ],
+  "OH": [
+    {
+      "name": "Senator One (OH)",
+      "email": "senator1_oh@test.gov"
+    },
+    {
+      "name": "Senator Two (OH)",
+      "email": "senator2_oh@test.gov"
+    }
+  ],
+  "OK": [
+    {
+      "name": "Senator One (OK)",
+      "email": "senator1_ok@test.gov"
+    },
+    {
+      "name": "Senator Two (OK)",
+      "email": "senator2_ok@test.gov"
+    }
+  ],
+  "OR": [
+    {
+      "name": "Senator One (OR)",
+      "email": "senator1_or@test.gov"
+    },
+    {
+      "name": "Senator Two (OR)",
+      "email": "senator2_or@test.gov"
+    }
+  ],
+  "PA": [
+    {
+      "name": "Senator One (PA)",
+      "email": "senator1_pa@test.gov"
+    },
+    {
+      "name": "Senator Two (PA)",
+      "email": "senator2_pa@test.gov"
+    }
+  ],
+  "RI": [
+    {
+      "name": "Senator One (RI)",
+      "email": "senator1_ri@test.gov"
+    },
+    {
+      "name": "Senator Two (RI)",
+      "email": "senator2_ri@test.gov"
+    }
+  ],
+  "SC": [
+    {
+      "name": "Senator One (SC)",
+      "email": "senator1_sc@test.gov"
+    },
+    {
+      "name": "Senator Two (SC)",
+      "email": "senator2_sc@test.gov"
+    }
+  ],
+  "SD": [
+    {
+      "name": "Senator One (SD)",
+      "email": "senator1_sd@test.gov"
+    },
+    {
+      "name": "Senator Two (SD)",
+      "email": "senator2_sd@test.gov"
+    }
+  ],
+  "TX": [
+    {
+      "name": "Senator One (TX)",
+      "email": "senator1_tx@test.gov"
+    },
+    {
+      "name": "Senator Two (TX)",
+      "email": "senator2_tx@test.gov"
+    }
+  ],
+  "UT": [
+    {
+      "name": "Senator One (UT)",
+      "email": "senator1_ut@test.gov"
+    },
+    {
+      "name": "Senator Two (UT)",
+      "email": "senator2_ut@test.gov"
+    }
+  ],
+  "VT": [
+    {
+      "name": "Senator One (VT)",
+      "email": "senator1_vt@test.gov"
+    },
+    {
+      "name": "Senator Two (VT)",
+      "email": "senator2_vt@test.gov"
+    }
+  ],
+  "VA": [
+    {
+      "name": "Senator One (VA)",
+      "email": "senator1_va@test.gov"
+    },
+    {
+      "name": "Senator Two (VA)",
+      "email": "senator2_va@test.gov"
+    }
+  ],
+  "WA": [
+    {
+      "name": "Senator One (WA)",
+      "email": "senator1_wa@test.gov"
+    },
+    {
+      "name": "Senator Two (WA)",
+      "email": "senator2_wa@test.gov"
+    }
+  ],
+  "WV": [
+    {
+      "name": "Senator One (WV)",
+      "email": "senator1_wv@test.gov"
+    },
+    {
+      "name": "Senator Two (WV)",
+      "email": "senator2_wv@test.gov"
+    }
+  ],
+  "WI": [
+    {
+      "name": "Senator One (WI)",
+      "email": "senator1_wi@test.gov"
+    },
+    {
+      "name": "Senator Two (WI)",
+      "email": "senator2_wi@test.gov"
+    }
+  ],
+  "WY": [
+    {
+      "name": "Senator One (WY)",
+      "email": "senator1_wy@test.gov"
+    },
+    {
+      "name": "Senator Two (WY)",
+      "email": "senator2_wy@test.gov"
+    }
+  ]
+}

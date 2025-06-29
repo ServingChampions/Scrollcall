@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScrollCall</title>
+  <meta name="description" content="View active Senate bills and take civic action.">
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/stylesheet/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+ 
+<header class="site-header">
+  <div class="header-inner">
+    <img src="assets/logo.png" alt="ScrollCall Logo" class="logo">
+
+    <!-- Hamburger icon BELOW the logo -->
+    <div id="menu-toggle" class="nav-toggle">&#9776;</div>
+
+    <!-- Nav menu -->
+    <nav class="nav-links" id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="representatives.html">Your Representatives</a>
+      <a href="bills.html">Senate Bill Feed</a>
+    </nav>
+  </div>
+</header>
+
+
+
+
+
+
+<main class="content">
+  <!-- About ScrollCall -->
+  <section class="about">
+    <h2>What is ScrollCall?</h2>
+    <p>
+      ScrollCall is a civic tool that helps you stay informed and take action on real legislation. Our mission is to make it effortless to voice your opinion on laws that impact your life in seconds, not hours.
+    </p>
+  </section>
+  
+  
+  <!-- Section Divider -->
+<section class="section-divider">
+  <h2>🗳️ Bills You Can Act On</h2>
+  <p>Explore current legislation and send your opinion directly to your senators.</p>
+</section>
+
+
+  <!-- Bill Card -->
+  <section class="bill-card">
+    <img src="assets/sb1.jpg" alt="GENIUS Act Thumbnail" class="bill-thumbnail">
+    <h1>S.394 – GENIUS Act of 2025</h1>
+    <p class="summary">A bill to foster national innovation and entrepreneurship. (Placeholder summary text.)</p>
+    <p><strong>Status:</strong> Referred to Senate Banking Committee</p>
+    <p><strong>Sponsor:</strong> Sen. Bill Hagerty [R-TN]</p>
+
+    <div id="statePrompt" class="state-select">
+  <label for="state">Select Your State:</label>
+  <select id="state">
+    <!-- JS will fill this -->
+  </select>
+</div>
+<p id="recipientMessage" class="recipient-message hidden"></p>
+
+    <div class="action-buttons">
+      <button id="supportBtn">Support</button>
+      <button id="opposeBtn">Oppose</button>
+    </div>
+
+
+
+<button id="toggleDetails" class="details-toggle">Read More</button>
+
+<div id="moreDetails" class="details hidden">
+  <p>The GENIUS Act aims to boost federal investment in startups, increase STEM education funding, and provide competitive grants to universities focusing on next-gen research. It emphasizes public-private partnerships and aims to ensure American leadership in critical technologies.</p>
+
+  <div class="bill-perspectives">
+    <h3>Support & Opposition</h3>
+
+    <div class="pros">
+      <h4>✅ Supporters argue this bill will:</h4>
+      <ul>
+        <li>Increase federal funding for STEM innovation</li>
+        <li>Help universities lead next-gen research</li>
+        <li>Strengthen American tech competitiveness</li>
+        <li>Create jobs through public-private partnerships</li>
+      </ul>
+    </div>
+
+    <div class="cons">
+      <h4>❌ Opponents argue this bill could:</h4>
+      <ul>
+        <li>Favor large institutions over small innovators</li>
+        <li>Increase federal spending without clear ROI</li>
+        <li>Overstep into private market dynamics</li>
+        <li>Lack accountability in grant distribution</li>
+      </ul>
+    </div>
+
+    <p class="disclaimer">🛡️ These viewpoints are summarized using publicly available information and general analysis. They are not legal advice or official endorsements. We encourage users to read the full bill and contact their elected officials directly.</p>
+  </div>
+</div>
+
+
+  </section>
+</main>
+
+
+  <footer class="site-footer">
+    <p>© 2025 ScrollCall. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
