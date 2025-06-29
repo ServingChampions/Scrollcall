@@ -436,32 +436,196 @@ input[type="text"] {
 
   /*
     ========================================
-    HomePage / Index
+    Reps Page
     ========================================
   */
+
+  .rep-preview-section {
+  padding: 1rem 1rem;
+  border-top: 2px solid #ddd;
+}
+
+.rep-preview-header {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.rep-preview-subtext {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.RepsHeader {
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
   
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  font-family: sans-serif;
+  font-size: 0.95rem;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #f0f8ff;
+}
+
+a {
+  color: #004080;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0.5rem;
+  }
+
+  td {
+    padding: 0.5rem;
+    border: none;
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.25rem;
+    color: #555;
+  }
+}
+
 
 
   /*
     ========================================
-    Services
+    Bills Page
     ========================================
   */
 
+.vote-preview-section {
+  padding: 3rem 1rem;
+  background-color: #f8f9fc;
+  border-top: 2px solid #ddd;
+}
 
+.vote-preview-header {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
 
-  /*
-    ========================================
-    Portfolio
-    ========================================
-  */
+.vote-preview-subtext {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #666;
+  font-style: italic;
+}
 
-  
-  
-  
-  /*
-    ========================================
-    Connect
-    ========================================
-  */
+.bill-vote-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 700px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
 
+.bill-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  padding-top: 50px;
+}
+
+.bill-info {
+  padding: 1.5rem;
+}
+
+.bill-info h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.bill-info a {
+  color: #0047ab;
+  text-decoration: none;
+}
+
+.bill-info a:hover {
+  text-decoration: underline;
+}
+
+.vote-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.vote-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: default;
+  font-size: 1rem;
+}
+
+.vote-btn.up {
+  background-color: #e6f4ea;
+  color: #137333;
+}
+
+.vote-btn.down {
+  background-color: #fdecea;
+  color: #a93226;
+}
+
+@media (min-width: 640px) {
+  .bill-vote-card {
+    flex-direction: row;
+  }
+
+  .bill-image {
+    width: 40%;
+    height: 100%;
+  }
+
+  .bill-info {
+    width: 60%;
+  }
+}
