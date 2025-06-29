@@ -1,5 +1,4 @@
 window.onload = () => {
-  // 1. Populate State Dropdown (only if it exists)
   const allStates = [
     'TEST',
     'AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA',
@@ -9,111 +8,97 @@ window.onload = () => {
     'SD','TN','TX','UT','VT','VA','WA','WV','WI','WY'
   ];
 
-  const stateSelect = document.getElementById('state');
-  const recipientMessage = document.getElementById('recipientMessage');
-
-  if (stateSelect) {
-    stateSelect.innerHTML = '<option value="">-- Select State --</option>';
-    allStates.forEach(stateCode => {
-      const option = document.createElement('option');
-      option.value = stateCode;
-      option.textContent = stateCode;
-      stateSelect.appendChild(option);
-    });
-  }
-
-  // 2. Toggle Read More section (if present)
-  const toggleBtn = document.getElementById('toggleDetails');
-  const moreDetails = document.getElementById('moreDetails');
-  if (toggleBtn && moreDetails) {
-    toggleBtn.addEventListener('click', () => {
-      const isHidden = moreDetails.classList.toggle('hidden');
-      toggleBtn.innerText = isHidden ? 'Read More' : 'Hide Details';
-    });
-  }
-
-  // 3. Load senator data
   let senatorsData = {};
-  let selectedState = '';
+  let selectedStates = {}; // Map bill index -> selected state
 
+  // Load senators.json once
   async function getSenators() {
     try {
       const res = await fetch('assets/data/senators.json');
-      const data = await res.json();
-      console.log("Loaded senators.json:", data);
-      return data;
+      return await res.json();
     } catch (err) {
       console.error("Failed to load senators.json:", err);
       return {};
     }
   }
 
-  getSenators().then(data => {
-    senatorsData = data;
-  });
+  // Set up each bill card independently
+  function setupBillCard(card, index) {
+    const dropdown = card.querySelector('.state-dropdown');
+    const message = card.querySelector('.recipient-message');
+    const supportBtn = card.querySelector('.support-btn');
+    const opposeBtn = card.querySelector('.oppose-btn');
+    const toggleBtn = card.querySelector('.details-toggle');
+    const detailsBox = card.querySelector('.details');
 
-  // 4. State dropdown selection handler
-  if (stateSelect && recipientMessage) {
-    stateSelect.addEventListener('change', (e) => {
-      selectedState = e.target.value;
-      console.log("Selected state:", selectedState);
+    // Populate dropdown
+    dropdown.innerHTML = '<option value="">-- Select State --</option>';
+    allStates.forEach(state => {
+      const opt = document.createElement('option');
+      opt.value = state;
+      opt.textContent = state;
+      dropdown.appendChild(opt);
+    });
 
-      if (senatorsData[selectedState]) {
-        const names = senatorsData[selectedState]
+    // Dropdown change logic
+    dropdown.addEventListener('change', (e) => {
+      const state = e.target.value;
+      selectedStates[index] = state;
+
+      if (senatorsData[state]) {
+        const names = senatorsData[state]
           .map(s => `<strong><u>Senator ${s.name}</u></strong>`)
           .join(' and ');
-
-        recipientMessage.innerHTML = `By selecting Support or Oppose, your email will be sent to ${names} urging them to consider your opinion on this bill.`;
-        recipientMessage.classList.remove('hidden');
+        message.innerHTML = `By selecting Support or Oppose, your email will be sent to ${names} urging them to consider your opinion on this bill.`;
+        message.classList.remove('hidden');
       } else {
-        recipientMessage.classList.add('hidden');
-        recipientMessage.textContent = '';
+        message.classList.add('hidden');
+        message.textContent = '';
       }
     });
-  }
 
-  // 5. Create mailto link on Support/Oppose click
-  function createUnifiedMailtoLink(action) {
-    if (!selectedState || !senatorsData[selectedState]) {
-      alert('Please select your state first.');
-      return;
+    // Mailto link builder
+    function sendMail(action) {
+      const state = selectedStates[index];
+      if (!state || !senatorsData[state]) {
+        alert('Please select your state first.');
+        return;
+      }
+
+      const billTitle = card.querySelector('h1').textContent;
+      const emails = senatorsData[state].map(s => s.email).join(',');
+      const subject = `Constituent Feedback on ${billTitle}`;
+      const body = `Dear Senator,\n\nAs a constituent of ${state}, I am writing to express my ${action} for ${billTitle}.\n\nThank you for your service.\n\nSincerely,\n[Your Name]`;
+
+      const mailto = `mailto:${emails}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location = mailto;
     }
 
-    const subject = `Constituent Feedback on S.394 – GENIUS Act of 2025`;
-    const body = `Dear Senator,\n\nAs a constituent of ${selectedState}, I am writing to express my ${action} for S.394 – the GENIUS Act of 2025.\n\nThank you for your service.\n\nSincerely,\n[Your Name]`;
+    // Button click handlers
+    supportBtn.addEventListener('click', () => sendMail('support'));
+    opposeBtn.addEventListener('click', () => sendMail('opposition'));
 
-    const emails = senatorsData[selectedState].map(s => s.email).join(',');
-    const mailto = `mailto:${emails}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-    window.location = mailto;
-  }
-
-  const supportBtn = document.getElementById('supportBtn');
-  const opposeBtn = document.getElementById('opposeBtn');
-
-  if (supportBtn) {
-    supportBtn.addEventListener('click', () => {
-      createUnifiedMailtoLink('support');
+    // Read More toggle
+    toggleBtn.addEventListener('click', () => {
+      const isHidden = detailsBox.classList.toggle('hidden');
+      toggleBtn.innerText = isHidden ? 'Read More' : 'Hide Details';
     });
   }
 
-  if (opposeBtn) {
-    opposeBtn.addEventListener('click', () => {
-      createUnifiedMailtoLink('opposition');
-    });
-  }
+  // Init
+  getSenators().then(data => {
+    senatorsData = data;
 
-
-// 6. Mobile nav toggle
-const menuToggle = document.getElementById('menu-toggle');
-const navMenu = document.getElementById('nav-menu');
-
-if (menuToggle && navMenu) {
-  menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+    const allCards = document.querySelectorAll('.bill-card');
+    allCards.forEach((card, index) => setupBillCard(card, index));
   });
-} else {
-  console.warn("Menu toggle or nav menu not found in DOM.");
-}
 
+  // Mobile nav toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  }
 };
