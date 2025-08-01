@@ -27,9 +27,9 @@
     </nav>
   </div>
 </header>
-
+<section>
 <button onclick="clearVotes()">🚨 Reset All Votes</button>
-
+</section>
 
 <label for="status-filter">Filter by Status:</label>
 <select id="status-filter">
@@ -46,8 +46,23 @@
 </select>
 
 
+<div id="filters">
+  <label for="committee-filter"><strong>Filter by Committee:</strong></label>
+  <select id="committee-filter">
+    <option value="">Loading committees...</option>
+  </select>
+</div>
+
+<div id="bills-list"></div>
+
+<button id="load-more" style="display:none">Load More Bills</button>
+
+
+
+
+
+
 <div id="bills-container">
-  <h2>Pending Bills</h2>
   <ul id="bills-list"></ul>
 </div>
 
