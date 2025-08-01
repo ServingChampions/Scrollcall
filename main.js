@@ -49,7 +49,7 @@ window.onload = () => {
         const names = senatorsData[state]
           .map(s => `<strong><u>Senator ${s.name}</u></strong>`)
           .join(' and ');
-        message.innerHTML = `By selecting Support or Oppose, your email will be sent to ${names} urging them to consider your opinion on this bill.`;
+        message.innerHTML = `By selecting Support or Oppose, your email will be sent to ${names} direct staff urging them to consider your opinion on this bill.`;
         message.classList.remove('hidden');
       } else {
         message.classList.add('hidden');
