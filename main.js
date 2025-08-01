@@ -120,7 +120,7 @@ function clearVotes() {
 // Legiscan API
 
 const API_KEY = "0cb8ccb82b8cfd2125429bbb610d0dfa";
-const MAX_INITIAL_BILLS =99;
+const MAX_INITIAL_BILLS = 99;
 const MAX_CONCURRENT_REQUESTS = 5;
 const votesRef = firebase.database().ref("votes");
 
@@ -170,6 +170,8 @@ async function fetchBills(limit = MAX_INITIAL_BILLS) {
       .slice(0, limit);
 
     const container = document.getElementById("bills-list");
+    container.innerHTML = "";
+
     const snapshot = await votesRef.once("value");
     const voteData = snapshot.val() || {};
     const committeeMap = {};
@@ -206,6 +208,7 @@ async function fetchBills(limit = MAX_INITIAL_BILLS) {
     attachVoteHandlers();
     sortByVotes();
     buildCommitteeDropdown(committeeMap);
+    buildStatusDropdown();
 
   } catch (error) {
     console.error("Error fetching bills:", error);
@@ -259,13 +262,32 @@ function buildCommitteeDropdown(committeeMap) {
       dropdown.innerHTML += `<option value="${name}">${name} (${count})</option>`;
     });
 
-  dropdown.addEventListener("change", function () {
-    const selected = this.value;
-    const cards = document.querySelectorAll(".bill-card");
-    cards.forEach(card => {
-      const cardCommittee = card.getAttribute("data-committee");
-      card.style.display = !selected || selected === cardCommittee ? "block" : "none";
+  dropdown.addEventListener("change", applyFilters);
+}
+
+function buildStatusDropdown() {
+  const dropdown = document.getElementById("status-filter");
+  if (!dropdown) return;
+
+  dropdown.innerHTML = `<option value="">All Statuses</option>`;
+  Object.entries(statusMap)
+    .sort((a, b) => a[0] - b[0])
+    .forEach(([status, label]) => {
+      dropdown.innerHTML += `<option value="${status}">${label}</option>`;
     });
+
+  dropdown.addEventListener("change", applyFilters);
+}
+
+function applyFilters() {
+  const selectedCommittee = document.getElementById("committee-filter").value;
+  const selectedStatus = document.getElementById("status-filter").value;
+
+  const cards = document.querySelectorAll(".bill-card");
+  cards.forEach(card => {
+    const matchesCommittee = !selectedCommittee || card.getAttribute("data-committee") === selectedCommittee;
+    const matchesStatus = !selectedStatus || card.getAttribute("data-status") === selectedStatus;
+    card.style.display = matchesCommittee && matchesStatus ? "block" : "none";
   });
 }
 
