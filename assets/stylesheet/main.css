@@ -535,85 +535,43 @@ a:hover {
     ========================================
   */
 
-.vote-preview-section {
-  padding: 3rem 1rem;
-  background-color: #f8f9fc;
-  border-top: 2px solid #ddd;
-}
-
-.vote-preview-header {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.vote-preview-subtext {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #666;
-  font-style: italic;
-}
-
-.bill-vote-card {
-  display: flex;
-  flex-direction: column;
-  background: white;
+.bill-card {
+  background: #f9f9f9;
   border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
   border-radius: 8px;
-  margin: 2rem auto;
-  max-width: 700px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-.bill-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  padding-top: 50px;
-}
-
-.bill-info {
-  padding: 1.5rem;
-}
-
-.bill-info h3 {
+.bill-card h3 {
   margin-top: 0;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 }
 
-.bill-info a {
-  color: #0047ab;
-  text-decoration: none;
+.bill-card p {
+  margin: 0.5rem 0;
 }
 
-.bill-info a:hover {
-  text-decoration: underline;
-}
-
-.vote-buttons {
-  margin-top: 1rem;
-  display: flex;
-  gap: 1rem;
-}
-
-.vote-btn {
-  padding: 0.5rem 1rem;
+.upvote-btn {
+  background-color: #0066cc;
+  color: white;
   border: none;
-  border-radius: 5px;
-  cursor: default;
-  font-size: 1rem;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.vote-btn.up {
-  background-color: #e6f4ea;
-  color: #137333;
+.upvote-btn:hover {
+  background-color: #004a99;
 }
 
-.vote-btn.down {
-  background-color: #fdecea;
-  color: #a93226;
+.vote-count {
+  margin-left: 0.5rem;
+  font-weight: bold;
 }
+
 
 @media (min-width: 640px) {
   .bill-vote-card {
