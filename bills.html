@@ -31,27 +31,11 @@
 <button onclick="clearVotes()">🚨 Reset All Votes</button>
 </section>
 
-<label for="status-filter">Filter by Status:</label>
-<select id="status-filter">
-  <option value="">All</option>
-  <option value="1">Introduced</option>
-  <option value="2">Passed One Chamber</option>
-  <option value="3">Passed Both Chambers</option>
-  <option value="4">Signed into Law</option>
-  <option value="5">Vetoed</option>
-  <option value="6">Failed</option>
-  <option value="7">Enacted</option>
-  <option value="8">Withdrawn</option>
-  <option value="9">Dead</option>
-</select>
+<p>Filter by:</p>
+<select id="committee-filter"></select>
+<select id="status-filter"></select>
+<div id="bills-list"></div>
 
-
-<div id="filters">
-  <label for="committee-filter"><strong>Filter by Committee:</strong></label>
-  <select id="committee-filter">
-    <option value="">Loading committees...</option>
-  </select>
-</div>
 
 <div id="bills-list"></div>
 
