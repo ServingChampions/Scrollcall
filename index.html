@@ -38,7 +38,9 @@
   <section class="about">
     <h2>What is ScrollCall?</h2>
     <p>
-      ScrollCall is a civic tool that helps you stay informed and take action on real legislation. Our mission is to make it effortless to voice your opinion on laws that impact your life in seconds, not hours.
+      ScrollCall is a civic tool that helps you stay informed and take action on real legislation. We make it effortless to share your stance with your senator's office and their staffers who influence them, so your voice is heard where it counts!
+      <br>
+      Your opinion should not get lost in a contact form. ScrollCall helps you share your voice with the right people faster.
     </p>
   </section>
   
@@ -46,7 +48,7 @@
   <!-- Section Divider -->
 <section class="section-divider">
   <h2>🗳️ Bills You Can Act On</h2>
-  <p>Explore current legislation and send your opinion directly to your senators.</p>
+  <p>Explore current bills and send your message directly to the senator's office and the staffers who shape what your senators see.</p>
 </section>
 
 
@@ -70,6 +72,26 @@
     <button class="support-btn">Support</button>
     <button class="oppose-btn">Oppose</button>
   </div>
+
+  <!-- Smart Compose (AI Letter Builder) -->
+<div class="smart-compose">
+  <button class="ai-toggle-btn">Smart Compose Message with AI</button>
+
+  <div class="ai-input-container hidden">
+    <label for="ai-reasons">Why do you care about this bill?</label>
+    <textarea id="ai-reasons" rows="4" placeholder="• It affects my hometown&#10;• I’m a student impacted by this policy&#10;• FEAUTURE NOT YET OPERATIONAL-COMING SOON"></textarea>
+    <button class="ai-generate-btn">Generate Message</button>
+  </div>
+
+  <div class="ai-result-container hidden">
+    <h4>Your Message Preview:</h4>
+    <div class="ai-message-preview"></div>
+    <button class="copy-message-btn">Copy to Clipboard</button>
+    <!-- Optional: include mailto fallback -->
+    <a href="#" class="mailto-link" target="_blank">Send via Email</a>
+  </div>
+</div>
+
 
   <button class="details-toggle">Read More</button>
 
@@ -125,6 +147,25 @@
     <button class="oppose-btn">Oppose</button>
   </div>
 
+    <!-- Smart Compose (AI Letter Builder) -->
+<div class="smart-compose">
+  <button class="ai-toggle-btn">Smart Compose Message with AI</button>
+
+  <div class="ai-input-container hidden">
+    <label for="ai-reasons">Why do you care about this bill?</label>
+    <textarea id="ai-reasons" rows="4" placeholder="• It affects my hometown&#10;• I’m a student impacted by this policy&#10;• FEAUTURE NOT YET OPERATIONAL-COMING SOON"></textarea>
+    <button class="ai-generate-btn">Generate Message</button>
+  </div>
+
+  <div class="ai-result-container hidden">
+    <h4>Your Message Preview:</h4>
+    <div class="ai-message-preview"></div>
+    <button class="copy-message-btn">Copy to Clipboard</button>
+    <!-- Optional: include mailto fallback -->
+    <a href="#" class="mailto-link" target="_blank">Send via Email</a>
+  </div>
+</div>
+
   <button class="details-toggle">Read More</button>
 
   <div class="details hidden">
@@ -165,5 +206,6 @@
   </footer>
 
   <script src="main.js"></script>
+  <script src="ai.js"></script>
 </body>
 </html>
