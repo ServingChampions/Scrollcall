@@ -139,16 +139,25 @@ if (modal) {
     modal.classList.add('hidden');
   };
 
-  copyBtn.onclick = () => {
-    const { bodyText } = window.currentEmailData;
-    navigator.clipboard.writeText(bodyText).then(() => {
-      copyBtn.textContent = 'Copied!';
-      setTimeout(() => {
-        copyBtn.textContent = 'Copy Message to Clipboard';
-      }, 2000);
-    });
-    modal.classList.add('hidden');
-  };
+copyBtn.onclick = () => {
+  const { emails, subject, bodyText } = window.currentEmailData;
+
+  const fullText = `To: ${emails}
+Subject: ${subject}
+
+${bodyText}`;
+
+  navigator.clipboard.writeText(fullText).then(() => {
+    copyBtn.textContent = 'Copied! Paste this into your email app to send.';
+    setTimeout(() => {
+      copyBtn.textContent = 'Copy Message to Clipboard';
+    }, 2500);
+  });
+
+  const modal = document.getElementById('email-modal');
+  if (modal) modal.classList.add('hidden');
+};
+
 }
 
 };
