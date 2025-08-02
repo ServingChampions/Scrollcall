@@ -27,21 +27,36 @@
     </nav>
   </div>
 </header>
-<section>
-<button onclick="clearVotes()">🚨 Reset All Votes</button>
+
+<section class="site-intro">
+  <h2>How This Works</h2>
+  <p>
+    This page pulls live data from the <a href="https://legiscan.com" target="_blank" rel="noopener">LegiScan API</a> to display active U.S. Senate bills. These bills are updated automatically and reflect what is currently under consideration in the Senate.
+  </p>
+  <p>
+    Use the dropdown filters to browse bills by <strong>committee</strong> or <strong>status</strong>. If a bill interests you, click the <strong>upvote</strong> button. Your votes help us determine which bills should be featured on our homepage for full analysis.
+  </p>
+  <p>
+    Featured bills on the homepage will include plain-language summaries, arguments for and against, and tools to help you directly contact your senator’s office.
+  </p>
 </section>
 
+
+<section class="filters">
 <p>Filter by:</p>
 <select id="committee-filter"></select>
 <select id="status-filter"></select>
 <div id="bills-list"></div>
-
+<button id="load-more">Load More Bills</button>
+</section>
 
 <div id="bills-list"></div>
 
 <button id="load-more" style="display:none">Load More Bills</button>
 
-
+<section>
+<button onclick="clearVotes()">🚨 Reset All Votes</button>
+</section>
 
 
 
