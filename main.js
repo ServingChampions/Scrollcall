@@ -58,24 +58,28 @@ window.onload = () => {
     });
 
     // Mailto link builder
-    function sendMail(action) {
-      const state = selectedStates[index];
-      if (!state || !senatorsData[state]) {
-        alert('Please select your state first.');
-        return;
-      }
+function sendMail(action) {
+  const state = selectedStates[index];
+  if (!state || !senatorsData[state]) {
+    alert('Please select your state first.');
+    return;
+  }
 
-      const billTitle = card.querySelector('h1').textContent;
-      const emails = senatorsData[state]
-  .flatMap(s => s.emails)
-  .join(',');
-      const subject = `Constituent Feedback on ${billTitle}`;
-      const body = `Dear Senator's Staff,\n\nAs a constituent of ${state}, I am writing to express my ${action} for ${billTitle}. I believe this legislation has a direct impact on people like me, and I hope my position will be considered in your discussions.\n\nThank you for your time and for the work you do to support our state.\n\nSincerely,\n[Your Name]`;
+  const billTitle = card.querySelector('h1').textContent;
+  const emails = senatorsData[state].flatMap(s => s.emails).join(',');
+  const subject = `Constituent Feedback on ${billTitle}`;
+  const bodyText = `Dear Senator's Staff,\n\nAs a constituent of ${state}, I am writing to express my ${action} for ${billTitle}. I believe this legislation has a direct impact on people like me, and I hope my position will be considered in your discussions.\n\nThank you for your time and for the work you do to support our state.\n\nSincerely,\n[Your Name]`;
 
+  const body = encodeURIComponent(bodyText);
 
-      const mailto = `mailto:${emails}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location = mailto;
-    }
+  // Store data for modal
+  window.currentEmailData = { emails, subject, body, bodyText };
+
+  // Show the modal
+  const modal = document.getElementById('email-modal');
+  if (modal) modal.classList.remove('hidden');
+}
+
 
     // Button click handlers
     supportBtn.addEventListener('click', () => sendMail('support'));
@@ -104,6 +108,49 @@ window.onload = () => {
       navMenu.classList.toggle('active');
     });
   }
+  // One-time modal button logic
+const modal = document.getElementById('email-modal');
+if (modal) {
+  const close = document.getElementById('cancel-modal');
+  const mailAppBtn = document.getElementById('mail-app-btn');
+  const gmailBtn = document.getElementById('gmail-btn');
+  const yahooBtn = document.getElementById('yahoo-btn');
+  const copyBtn = document.getElementById('copy-btn');
+
+  close.onclick = () => modal.classList.add('hidden');
+
+  mailAppBtn.onclick = () => {
+    const { emails, subject, body } = window.currentEmailData;
+    window.location.href = `mailto:${emails}?subject=${encodeURIComponent(subject)}&body=${body}`;
+    modal.classList.add('hidden');
+  };
+
+  gmailBtn.onclick = () => {
+    const { emails, subject, body } = window.currentEmailData;
+    const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${emails}&su=${encodeURIComponent(subject)}&body=${body}`;
+    window.open(url, '_blank');
+    modal.classList.add('hidden');
+  };
+
+  yahooBtn.onclick = () => {
+    const { emails, subject, body } = window.currentEmailData;
+    const url = `https://compose.mail.yahoo.com/?to=${emails}&subject=${encodeURIComponent(subject)}&body=${body}`;
+    window.open(url, '_blank');
+    modal.classList.add('hidden');
+  };
+
+  copyBtn.onclick = () => {
+    const { bodyText } = window.currentEmailData;
+    navigator.clipboard.writeText(bodyText).then(() => {
+      copyBtn.textContent = 'Copied!';
+      setTimeout(() => {
+        copyBtn.textContent = 'Copy Message to Clipboard';
+      }, 2000);
+    });
+    modal.classList.add('hidden');
+  };
+}
+
 };
 
 
@@ -298,3 +345,4 @@ function applyFilters() {
 document.addEventListener("DOMContentLoaded", () => {
   fetchBills();
 });
+
