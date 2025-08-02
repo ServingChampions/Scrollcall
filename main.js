@@ -1,7 +1,7 @@
 window.onload = () => {
   const allStates = [
     'TEST',
-    'AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA',
+    'AK','AL','AZ','AR','CA','CO','CT','DE','FL','GA',
     'HI','ID','IL','IN','IA','KS','KY','LA','ME','MD',
     'MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ',
     'NM','NY','NC','ND','OH','OK','OR','PA','RI','SC',
@@ -66,9 +66,12 @@ window.onload = () => {
       }
 
       const billTitle = card.querySelector('h1').textContent;
-      const emails = senatorsData[state].map(s => s.email).join(',');
+      const emails = senatorsData[state]
+  .flatMap(s => s.emails)
+  .join(',');
       const subject = `Constituent Feedback on ${billTitle}`;
-      const body = `Dear Senator,\n\nAs a constituent of ${state}, I am writing to express my ${action} for ${billTitle}.\n\nThank you for your service.\n\nSincerely,\n[Your Name]`;
+      const body = `Dear Senator's Staff,\n\nAs a constituent of ${state}, I am writing to express my ${action} for ${billTitle}. I believe this legislation has a direct impact on people like me, and I hope my position will be considered in your discussions.\n\nThank you for your time and for the work you do to support our state.\n\nSincerely,\n[Your Name]`;
+
 
       const mailto = `mailto:${emails}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       window.location = mailto;
@@ -120,9 +123,10 @@ function clearVotes() {
 // Legiscan API
 
 const API_KEY = "0cb8ccb82b8cfd2125429bbb610d0dfa";
-const MAX_INITIAL_BILLS = 99;
+const MAX_INITIAL_BILLS = 150;
 const MAX_CONCURRENT_REQUESTS = 5;
 const votesRef = firebase.database().ref("votes");
+
 
 const statusMap = {
   1: "Introduced",
