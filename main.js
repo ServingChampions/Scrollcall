@@ -147,12 +147,30 @@ Subject: ${subject}
 
 ${bodyText}`;
 
-  navigator.clipboard.writeText(fullPlainText).then(() => {
-    copyBtn.textContent = 'Copied! Paste this into your email app to send.';
-    setTimeout(() => {
-      copyBtn.textContent = 'Copy Message to Clipboard';
-    }, 2500);
-  });
+  const tempTextarea = document.createElement("textarea");
+  tempTextarea.value = fullPlainText;
+  tempTextarea.style.position = "fixed"; // Prevent scrolling on mobile
+  tempTextarea.style.opacity = "0";
+  document.body.appendChild(tempTextarea);
+  tempTextarea.focus();
+  tempTextarea.select();
+
+  try {
+    const successful = document.execCommand("copy");
+    if (successful) {
+      copyBtn.textContent = 'Copied! Paste this into your email app to send.';
+      setTimeout(() => {
+        copyBtn.textContent = 'Copy Message to Clipboard';
+      }, 2500);
+    } else {
+      alert("Copy failed. Please try again.");
+    }
+  } catch (err) {
+    console.error("Clipboard fallback failed:", err);
+    alert("Copy not supported on this device.");
+  }
+
+  document.body.removeChild(tempTextarea);
 
   const modal = document.getElementById('email-modal');
   if (modal) modal.classList.add('hidden');
