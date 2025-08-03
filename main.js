@@ -142,12 +142,12 @@ if (modal) {
 copyBtn.onclick = () => {
   const { emails, subject, bodyText } = window.currentEmailData;
 
-  const fullText = `To: ${emails}
+  const fullPlainText = `To: ${emails}
 Subject: ${subject}
 
 ${bodyText}`;
 
-  navigator.clipboard.writeText(fullText).then(() => {
+  navigator.clipboard.writeText(fullPlainText).then(() => {
     copyBtn.textContent = 'Copied! Paste this into your email app to send.';
     setTimeout(() => {
       copyBtn.textContent = 'Copy Message to Clipboard';
@@ -157,6 +157,7 @@ ${bodyText}`;
   const modal = document.getElementById('email-modal');
   if (modal) modal.classList.add('hidden');
 };
+
 
 }
 
