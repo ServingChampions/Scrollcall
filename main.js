@@ -1,6 +1,5 @@
 window.onload = () => {
   const allStates = [
-    'TEST',
     'AK','AL','AZ','AR','CA','CO','CT','DE','FL','GA',
     'HI','ID','IL','IN','IA','KS','KY','LA','ME','MD',
     'MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ',
