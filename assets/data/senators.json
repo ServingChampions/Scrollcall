@@ -1,4 +1,18 @@
 {
+  "TEST": [
+    {
+      "name": "Senator Steve",
+      "emails": [
+        "colonelreb@rocketmail.com"
+      ]
+    },
+    {
+      "name": "Senator Mary",
+      "emails": [
+        "test@ussenate.gov"
+      ]
+    }
+  ],
   "AK": [
     {
       "name": "Lisa Murkowski (R)",
