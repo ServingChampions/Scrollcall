@@ -1,10 +1,10 @@
 window.onload = () => {
   const allStates = [
-    'AK','AL','AZ','AR','CA','CO','CT','DE','FL','GA',
-    'HI','ID','IL','IN','IA','KS','KY','LA','ME','MD',
-    'MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ',
-    'NM','NY','NC','ND','OH','OK','OR','PA','RI','SC',
-    'SD','TN','TX','UT','VT','VA','WA','WV','WI','WY'
+    'AK', 'AL', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA',
+    'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',
+    'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ',
+    'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC',
+    'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY'
   ];
 
   let senatorsData = {};
@@ -57,27 +57,32 @@ window.onload = () => {
     });
 
     // Mailto link builder
-function sendMail(action) {
-  const state = selectedStates[index];
-  if (!state || !senatorsData[state]) {
-    alert('Please select your state first.');
-    return;
-  }
+    function sendMail(action) {
+      const state = selectedStates[index];
+      if (!state || !senatorsData[state]) {
+        alert('Please select your state first.');
+        return;
+      }
 
-  const billTitle = card.querySelector('h1').textContent;
-  const emails = senatorsData[state].flatMap(s => s.emails).join(',');
-  const subject = `Constituent Feedback on ${billTitle}`;
-  const bodyText = `Dear Senator's Staff,\n\nAs a constituent of ${state}, I am writing to express my ${action} for ${billTitle}. I believe this legislation has a direct impact on people like me, and I hope my position will be considered in your discussions.\n\nThank you for your time and for the work you do to support our state.\n\nSincerely,\n[Your Name]`;
+      const billTitle = card.querySelector('h1').textContent;
+      const emails = senatorsData[state].flatMap(s => s.emails).join(';');
+      const subject = `Constituent Feedback on ${billTitle}`;
+      const bodyText = `Dear Senator's Staff,\n\nAs a constituent of ${state}, I am writing to express my ${action} for ${billTitle}. I believe this legislation has a direct impact on people like me, and I hope my position will be considered in your discussions.\n\nThank you for your time and for the work you do to support our state.\n\nSincerely,\n[Your Name]`;
 
-  const body = encodeURIComponent(bodyText);
+      const body = encodeURIComponent(bodyText);
 
-  // Store data for modal
-  window.currentEmailData = { emails, subject, body, bodyText };
+      // Store data for modal
+      window.currentEmailData = {
+        emails,
+        subject,
+        body,
+        bodyText
+      };
 
-  // Show the modal
-  const modal = document.getElementById('email-modal');
-  if (modal) modal.classList.remove('hidden');
-}
+      // Show the modal
+      const modal = document.getElementById('email-modal');
+      if (modal) modal.classList.remove('hidden');
+    }
 
 
     // Button click handlers
@@ -108,81 +113,126 @@ function sendMail(action) {
     });
   }
   // One-time modal button logic
-const modal = document.getElementById('email-modal');
-if (modal) {
-  const close = document.getElementById('cancel-modal');
-  const mailAppBtn = document.getElementById('mail-app-btn');
-  const gmailBtn = document.getElementById('gmail-btn');
-  const yahooBtn = document.getElementById('yahoo-btn');
-  const copyBtn = document.getElementById('copy-btn');
+  const modal = document.getElementById('email-modal');
+  if (modal) {
+    const close = document.getElementById('cancel-modal');
+    const mailAppBtn = document.getElementById('mail-app-btn');
+    const gmailBtn = document.getElementById('gmail-btn');
+    const yahooBtn = document.getElementById('yahoo-btn');
+    const copyBtn = document.getElementById('copy-btn');
 
-  close.onclick = () => modal.classList.add('hidden');
+    close.onclick = () => modal.classList.add('hidden');
 
-  mailAppBtn.onclick = () => {
-    const { emails, subject, body } = window.currentEmailData;
-    window.location.href = `mailto:${emails}?subject=${encodeURIComponent(subject)}&body=${body}`;
-    modal.classList.add('hidden');
-  };
+    mailAppBtn.onclick = () => {
+      const {
+        emails,
+        subject,
+        body
+      } = window.currentEmailData;
+      window.location.href = `mailto:${emails}?subject=${encodeURIComponent(subject)}&body=${body}`;
+      modal.classList.add('hidden');
+    };
 
-  gmailBtn.onclick = () => {
-    const { emails, subject, body } = window.currentEmailData;
-    const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${emails}&su=${encodeURIComponent(subject)}&body=${body}`;
-    window.open(url, '_blank');
-    modal.classList.add('hidden');
-  };
+    gmailBtn.onclick = () => {
+      const {
+        emails,
+        subject,
+        body
+      } = window.currentEmailData;
+      const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${emails}&su=${encodeURIComponent(subject)}&body=${body}`;
+      window.open(url, '_blank');
+      modal.classList.add('hidden');
+    };
 
-  yahooBtn.onclick = () => {
-    const { emails, subject, body } = window.currentEmailData;
-    const url = `https://compose.mail.yahoo.com/?to=${emails}&subject=${encodeURIComponent(subject)}&body=${body}`;
-    window.open(url, '_blank');
-    modal.classList.add('hidden');
-  };
+    yahooBtn.onclick = () => {
+      const {
+        emails,
+        subject,
+        body
+      } = window.currentEmailData;
+      const url = `https://compose.mail.yahoo.com/?to=${emails}&subject=${encodeURIComponent(subject)}&body=${body}`;
+      window.open(url, '_blank');
+      modal.classList.add('hidden');
+    };
 
-copyBtn.onclick = () => {
-  const { emails, subject, bodyText } = window.currentEmailData;
+    copyBtn.onclick = () => {
+      const {
+        emails,
+        subject,
+        bodyText
+      } = window.currentEmailData;
 
-  const fullPlainText = `To: ${emails}
+      const fullPlainText = `To: ${emails}
 Subject: ${subject}
 
 ${bodyText}`;
 
-  const tempTextarea = document.createElement("textarea");
-  tempTextarea.value = fullPlainText;
-  tempTextarea.style.position = "fixed"; // Prevent scrolling on mobile
-  tempTextarea.style.opacity = "0";
-  document.body.appendChild(tempTextarea);
-  tempTextarea.focus();
-  tempTextarea.select();
+      const tempTextarea = document.createElement("textarea");
+      tempTextarea.value = fullPlainText;
+      tempTextarea.style.position = "fixed"; // Prevent scrolling on mobile
+      tempTextarea.style.opacity = "0";
+      document.body.appendChild(tempTextarea);
+      tempTextarea.focus();
+      tempTextarea.select();
 
-  try {
-    const successful = document.execCommand("copy");
-    if (successful) {
-      copyBtn.textContent = 'Copied! Paste this into your email app to send.';
-      setTimeout(() => {
-        copyBtn.textContent = 'Copy Message to Clipboard';
-      }, 2500);
-    } else {
-      alert("Copy failed. Please try again.");
-    }
-  } catch (err) {
-    console.error("Clipboard fallback failed:", err);
-    alert("Copy not supported on this device.");
+      try {
+        const successful = document.execCommand("copy");
+        if (successful) {
+          copyBtn.textContent = 'Copied! Paste this into your email app to send.';
+          setTimeout(() => {
+            copyBtn.textContent = 'Copy Message to Clipboard';
+          }, 2500);
+        } else {
+          alert("Copy failed. Please try again.");
+        }
+      } catch (err) {
+        console.error("Clipboard fallback failed:", err);
+        alert("Copy not supported on this device.");
+      }
+
+      document.body.removeChild(tempTextarea);
+
+      const modal = document.getElementById('email-modal');
+      if (modal) modal.classList.add('hidden');
+    };
   }
 
-  document.body.removeChild(tempTextarea);
+  // **NEW: Bill search filter logic** const filterBills = () => {
+    // 1. Get the dropdown and all bill cards
+    const billDropdown = document.getElementById('bill-filter-dropdown');
+    const allBillCards = document.querySelectorAll('.bill-card');
 
-  const modal = document.getElementById('email-modal');
-  if (modal) modal.classList.add('hidden');
-};
+    if (billDropdown && allBillCards.length > 0) {
+      // 2. Populate the dropdown with bill titles
+      const billTitles = document.querySelectorAll('.bill-card h1');
+      billTitles.forEach(title => {
+        const option = document.createElement('option');
+        option.value = title.textContent.trim();
+        option.textContent = title.textContent.trim();
+        billDropdown.appendChild(option);
+      });
 
+      // 3. Add an event listener to the dropdown
+      billDropdown.addEventListener('change', (event) => {
+        const selectedTitle = event.target.value;
 
-}
+        allBillCards.forEach(card => {
+          const cardTitle = card.querySelector('h1').textContent.trim();
+          if (selectedTitle === '' || cardTitle === selectedTitle) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    }
+  };
 
-};
+  // Call the new function to set up the filter
+  filterBills();
+;
 
-
-
-
+// All your separate functions (clearVotes, fetchBills, etc.) go here outside of window.onload
 // Clear Votes
 
 function clearVotes() {
@@ -222,9 +272,15 @@ async function throttledFetchBillDetails(bills) {
     const batch = bills.slice(index, index + MAX_CONCURRENT_REQUESTS);
     const batchResults = await Promise.allSettled(batch.map(bill =>
       fetch(`https://api.legiscan.com/?key=${API_KEY}&op=getBill&id=${bill.bill_id}`)
-        .then(res => res.json())
-        .then(detail => ({ bill, committee: detail?.bill?.committee?.name || "Unknown" }))
-        .catch(() => ({ bill, committee: "Unknown" }))
+      .then(res => res.json())
+      .then(detail => ({
+        bill,
+        committee: detail?.bill?.committee?.name || "Unknown"
+      }))
+      .catch(() => ({
+        bill,
+        committee: "Unknown"
+      }))
     ));
     results.push(...batchResults);
     index += MAX_CONCURRENT_REQUESTS;
@@ -258,7 +314,10 @@ async function fetchBills(limit = MAX_INITIAL_BILLS) {
 
     detailedBills.forEach(result => {
       if (result.status !== "fulfilled") return;
-      const { bill, committee } = result.value;
+      const {
+        bill,
+        committee
+      } = result.value;
       const voteCount = voteData[bill.number] || 0;
       const readableStatus = statusMap[bill.status] || "Unknown";
 
@@ -304,7 +363,7 @@ function sortByVotes() {
 function attachVoteHandlers() {
   const buttons = document.querySelectorAll(".upvote-btn");
   buttons.forEach(button => {
-    button.addEventListener("click", async function () {
+    button.addEventListener("click", async function() {
       const billNumber = this.getAttribute("data-bill");
 
       const votedBills = JSON.parse(localStorage.getItem("votedBills")) || [];
@@ -368,8 +427,3 @@ function applyFilters() {
     card.style.display = matchesCommittee && matchesStatus ? "block" : "none";
   });
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  fetchBills();
-});
-
