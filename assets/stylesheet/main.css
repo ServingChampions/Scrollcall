@@ -466,6 +466,7 @@ input[type="text"] {
   color: #444;
 }
 
+
 .state-select {
   margin-top: 1rem;
     display: flex;
@@ -490,8 +491,52 @@ input[type="text"] {
   margin-top: 0.5rem;
 }
 
+.section-divider {
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
 
+.section-divider h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
 
+.section-divider p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.bill-filter {
+  margin: 0 auto;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bill-filter label {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+#bill-filter-dropdown {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: border-color 0.2s ease;
+}
+
+#bill-filter-dropdown:focus {
+  outline: none;
+  border-color: #28a745; /* Match your green theme */
+}
 
 
 #email-modal {
